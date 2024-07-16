@@ -32,5 +32,15 @@
         border: 5px solid var(--naranja);
     }
 
-} /*Fin categoria*/
+    .contenedorCards {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        width: 100%;
+        flex-wrap: wrap;
+    }
 
+}
+
+/*Fin categoria*/

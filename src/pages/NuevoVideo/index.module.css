@@ -1,20 +1,18 @@
-.containerModalVideo{
-    width:100vw;
-    height:auto;
+.containerModalVideo {
+    width: 100vw;
+    height: auto;
     margin: 0;
-    
-     
 
-    .titulos{
-        width:100%;
+    .titulos {
+        width: 100%;
         height: 136px;
-        gap:5px;
-        display:flex ;
+        gap: 5px;
+        display: flex;
         align-items: center;
         flex-direction: column;
-        
 
-        h2{
+
+        h2 {
             margin: 0;
             margin-top: 20px;
             font-family: var(--front);
@@ -22,72 +20,74 @@
             font-weight: 900;
             line-height: 70px;
             text-align: center;
-            color:var(--blanco);
+            color: var(--blanco);
 
         }
 
-        h6{
+        h6 {
             width: 782px;
             height: 56px;
             margin: 0;
-            font-family:var(--front);
+            font-family: var(--front);
             font-size: 17px;
             font-weight: 400;
             line-height: 23px;
             text-align: center;
-            color:var(--blanco);
+            color: var(--blanco);
         }
 
-    }/*Fin titulos*/
+    }
 
-    .formulario{
+    /*Fin titulos*/
+
+    .formulario {
         width: 100%;
         height: 867px;
         gap: 60px;
-        
 
-        h4{
+
+        h4 {
             display: flex;
             align-items: center;
             height: 75px;
             margin-bottom: 70px;
             border-top: 1px solid var(--gris-claro);
-            border-bottom:1px solid var(--gris-claro) ;
+            border-bottom: 1px solid var(--gris-claro);
             margin-left: 70px;
             margin-right: 70px;
-            font-family:var(--font-button);
+            font-family: var(--font-button);
             font-size: 24px;
             font-weight: 600;
             line-height: 24px;
             text-align: left;
-            color:var(--blanco);
+            color: var(--blanco);
 
         }
 
-        
-        .contenedor{
-            width:100%;
+
+        .contenedor {
+            width: 100%;
             display: flex;
-            gap:60px;
+            gap: 60px;
             flex-direction: row;
             align-items: center;
-            justify-content:left;
+            justify-content: left;
             flex-wrap: wrap;
-            margin-left:5%;
+            margin-left: 5%;
             /* margin-right:5%; */
 
-            .titulo{
-                width:43%;
+            .titulo {
+                width: 43%;
                 height: 108px;
                 /* margin-bottom: 5px; */
                 display: flex;
-                flex-direction:column;
-                
+                flex-direction: column;
 
-                .labelTitulo{
+
+                .labelTitulo {
                     width: 100%;
                     height: 31px;
-                    font-family:var(--font-button);
+                    font-family: var(--font-button);
                     font-size: 18px;
                     font-weight: 600;
                     line-height: 24px;
@@ -96,78 +96,82 @@
 
                 }
 
-                .inputTitulo{
+                .inputTitulo {
                     width: 100%;
                     height: 62px;
                     border-radius: 10px;
-                    background:var(--gris-input);
+                    background: var(--gris-input);
                     border: 1px solid var(--azul-oscuro);
-                    font-family:var(--font-button);
+                    font-family: var(--font-button);
                     font-size: 15px;
                     font-weight: 600;
                     line-height: 24px;
                     text-align: left;
                     padding-left: 15px;
                     color: var(--gris-claro);
-        
+
                 }
 
-            }/*Fin titulo*/
+            }
 
-            .imagen{
-                width:43%;
+            /*Fin titulo*/
+
+            .imagen {
+                width: 43%;
                 height: 108px;
                 /* margin-bottom: 5px; */
                 display: flex;
-                flex-direction:column;
-               
+                flex-direction: column;
 
-                .labelImagen{
+
+                .labelImagen {
                     display: flex;
                     flex-direction: column;
                     width: 100%;
                     height: 31px;
-                    font-family:var(--font-button);
+                    font-family: var(--font-button);
                     font-size: 18px;
                     font-weight: 600;
                     line-height: 24px;
                     text-align: left;
                     color: var(--blanco);
 
-                } 
+                }
 
-                .inputImagen{
-                        
+                .inputImagen {
+
                     width: 100%;
                     height: 62px;
                     gap: 0px;
                     border-radius: 10px;
-                    background:var(--gris-input);
+                    background: var(--gris-input);
                     border: 1px solid var(--azul-oscuro);
-                    font-family:var(--font-button);
+                    font-family: var(--font-button);
                     font-size: 15px;
                     font-weight: 600;
                     line-height: 24px;
                     text-align: left;
                     padding-left: 15px;
                     color: var(--gris-claro);
-    
+
                 }
 
-            }/*Fin imagen*/
+            }
 
-            .video{
-                width:43%;
+            /*Fin imagen*/
+
+            .video {
+                width: 43%;
                 height: 108px;
                 /* margin-bottom: 5px; */
                 display: flex;
-                flex-direction:column;
+                flex-direction: column;
 
 
-                .labelVideo{
+                .labelVideo {
                     width: 164px;
                     height: 31px;
-                    font-family:var(--font-button);
+                    font-family: var(--font-button);
                     font-size: 18px;
                     font-weight: 600;
                     line-height: 24px;
@@ -175,40 +179,42 @@
                     color: var(--blanco);
                 }
 
-                .inputVideo{
-                        
+                .inputVideo {
+
                     width: 100%;
                     height: 62px;
                     border-radius: 10px;
-                    background:var(--gris-input);
+                    background: var(--gris-input);
                     border: 1px solid var(--azul-oscuro);
-                    font-family:var(--font-button);
+                    font-family: var(--font-button);
                     font-size: 15px;
                     font-weight: 600;
                     line-height: 24px;
                     text-align: left;
                     padding-left: 15px;
                     color: var(--gris-claro);
-    
+
                 }
 
-            }/*Fin video*/
-            
+            }
 
-            .descripcion{
-                width:43%;
+            /*Fin video*/
+
+
+            .descripcion {
+                width: 43%;
                 height: 250px;
                 /* margin-bottom: 5px; */
                 display: flex;
-                flex-direction:column;
+                flex-direction: column;
 
 
-                .labelDescripcion{
+                .labelDescripcion {
                     display: flex;
                     flex-direction: column;
                     width: 100%;
                     height: 10%;
-                    font-family:var(--font-button);
+                    font-family: var(--font-button);
                     font-size: 18px;
                     font-weight: 600;
                     line-height: 24px;
@@ -221,9 +227,9 @@
                     width: 100%;
                     height: 90%;
                     border-radius: 10px;
-                    background:var(--gris-input);
+                    background: var(--gris-input);
                     border: 1px solid var(--azul-oscuro);
-                    font-family:var(--font-button);
+                    font-family: var(--font-button);
                     font-size: 15px;
                     font-weight: 600;
                     line-height: 24px;
@@ -231,14 +237,20 @@
                     padding-left: 15px;
                     color: var(--gris-claro);
                 }
-                
-            }/*Fin descripcion*/
 
-            
-        }/*Fin contenedor*/
+            }
+
+            /*Fin descripcion*/
 
 
-    }/*Fin formulario*/
+        }
+
+        /*Fin contenedor*/
+
+
+    }
+
+    /*Fin formulario*/
 
     /* .irArriba{
         display: flex;
@@ -253,41 +265,43 @@
 
     } */
 
-    .btn{
-        width:100%;
+    .btn {
+        width: 100%;
         height: 108px;
         gap: 70px;
         margin: 0;
         margin-left: 70px;
         display: flex;
         flex-direction: row;
-        justify-content:left;
+        justify-content: left;
 
-        button{
+        button {
             width: 180px;
             height: 54px;
             border-radius: 15px;
-            font-family:var(--font-button);
+            font-family: var(--font-button);
             font-size: 18px;
             font-weight: 900;
             line-height: 24px;
             text-align: center;
-            background:var(--gris-input);
-            color:var(--blanco) 
+            background: var(--gris-input);
+            color: var(--blanco)
         }
 
-        .btnGuardar{
-                border: 1px solid var(--azul-oscuro);
+        .btnGuardar {
+            border: 1px solid var(--azul-oscuro);
         }
-    
-        .btnLimpiar{
-                color:var(--blanco);
-                border:1px solid var(--blanco)
+
+        .btnLimpiar {
+            color: var(--blanco);
+            border: 1px solid var(--blanco)
         }
-      
-
-    }/*Fin btn*/
-
-}/*Fin containerModalVideo*/
 
 
+    }
+
+    /*Fin btn*/
+
+}
+
+/*Fin containerModalVideo*/

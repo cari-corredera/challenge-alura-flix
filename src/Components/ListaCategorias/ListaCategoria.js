@@ -1,7 +1,7 @@
 import styles from "./ListaCategoria.module.css"
 
-function ListaCategorias (){
-    return(
+function ListaCategorias() {
+    return (
         <div className={styles.categorias}>
             <label>Categorías</label>
             <select className={styles.listaCategorias}>

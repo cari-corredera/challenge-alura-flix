@@ -4,23 +4,23 @@ import logo from "./logo-flix.png"
 import CabeceraLink from "../CabeceraLink/CabeceraLink"
 
 
-function Cabecera(){
-    return(
+function Cabecera() {
+    return (
         <header className={styles.cabecera}>
-            <Link to = {"/"}>
+            <Link to={"/"}>
                 <section className={styles.logoContainer}>
-                    <img src={logo} alt=" Logo ALuraFlix"/>  
+                    <img src={logo} alt=" Logo ALuraFlix" />
                 </section>
             </Link>
 
             <nav className={styles.botones}>
-                <CabeceraLink url= "/">
-                   <button className={styles.btnHome}>
+                <CabeceraLink url="/">
+                    <button className={styles.btnHome}>
                         HOME
-                    </button> 
+                    </button>
                 </CabeceraLink>
-                
-                <CabeceraLink url= "./nuevovideo">
+
+                <CabeceraLink url="./nuevovideo">
                     <button className={styles.btnVideo}>
                         NUEVO VIDEO
                     </button>

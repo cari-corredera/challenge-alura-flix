@@ -2,8 +2,7 @@ import Cabecera from "../../Components/Cabecera/Cabecera";
 import Banner from "../../Components/Banner/Banner";
 import Categorias from "../../Components/Categorias/Categorias";
 import Footer from "../../Components/Footer/Footer"
-// import Cards from "Components/Cards/Cards";
-import styles from "./index.module.css"
+// import styles from "./index.module.css"
 import Modal from "Components/Modal/Modal";
 import EditForm from "Components/EditForm/EditForm";
 import { useState, useEffect } from "react";
@@ -70,41 +69,41 @@ function Inicio() {
             });
     };
 
+    const handleDeleteClick = (cardId, category) => {
+        fetch(`http://localhost:3001/${category}/${cardId}`, {
+
+            method: 'DELETE'
+        })
+            // .then(() => {
+            //     setCards(prevCards => ({
+            //         ...prevCards,
+            //         [category]: prevCards[category].filter(card => card.id !== cardId)
+            //     }));
+            // });
+
+            .then(() => {
+                setCards(prevCards => {
+                    const updatedCategory = prevCards[category] || [];
+                    return {
+                        ...prevCards,
+                        [category]: updatedCategory.filter(card => card.id !== cardId)
+                    };
+                });
+            });
+        };
+
 
 
     return (
         <>
             <Cabecera />
             <Banner img="fondo" src="player" />
-            {/* <Categorias title="FRONT END" nombreCategoria="frontEnd">
-                <section className={styles.container}>
-                {frontend.map((frontvideo) => {
-                    return <Cards {...frontvideo} key={frontvideo.id} onEdit={handleEditClick}/>
-                })}
-                </section>
-            </Categorias>
-           
-            <Categorias title="BACK END" nombreCategoria="backEnd">
-            <section className={styles.container}>
-                {backend.map((backvideo) => {
-                    return <Cards {...backvideo} key={backvideo.id} onEdit={handleEditClick}/>
-                })}
-                </section>
-            </Categorias>
 
-            <Categorias title="INNOVACIÓN Y GESTIÓN" nombreCategoria="innovacionGestion">
-            <section className={styles.container}>
-                {innovgestion.map((innovvideo) => {
-                    return <Cards {...innovvideo} key={innovvideo.id} onEdit={handleEditClick}/>
-                })}
-                </section>
-            </Categorias> */}
+            <Categorias title="FRONT END" nombreCategoria="frontEnd" cards={cards.frontend} onEdit={handleEditClick} onDelete={handleDeleteClick} />
 
-            <Categorias title="FRONT END" nombreCategoria="frontEnd" cards={cards.frontend} onEdit={handleEditClick} />
+            <Categorias title="BACK END" nombreCategoria="backEnd" cards={cards.backend} onEdit={handleEditClick} onDelete={handleDeleteClick} />
 
-            <Categorias title="BACK END" nombreCategoria="backEnd" cards={cards.backend} onEdit={handleEditClick} />
-
-            <Categorias title="INNOVACIÓN Y GESTIÓN" nombreCategoria="innovacionGestion" cards={cards.innovgestion} onEdit={handleEditClick} />
+            <Categorias title="INNOVACIÓN Y GESTIÓN" nombreCategoria="innovacionGestion" cards={cards.innovgestion} onEdit={handleEditClick} onDelete={handleDeleteClick} />
 
             <Footer />
             <Modal open={isModalOpen} onClose={handleCloseModal}>

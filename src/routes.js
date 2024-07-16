@@ -3,16 +3,16 @@
 
 import NuevoVideo from "pages/NuevoVideo";
 
-const { default: Inicio } = require ("./pages/Inicio");
-const { BrowserRouter, Routes, Route } = require ("react-router-dom");
+const { default: Inicio } = require("./pages/Inicio");
+const { BrowserRouter, Routes, Route } = require("react-router-dom");
 
-function AppRoutes(){
-    return(
+function AppRoutes() {
+    return (
         <BrowserRouter>
             <Routes>
-                <Route path="/" element= {<Inicio/>}> </Route>
-               
-                 <Route path="/nuevovideo" element= {<NuevoVideo/>}></Route>
+                <Route path="/" element={<Inicio />}> </Route>
+
+                <Route path="/nuevovideo" element={<NuevoVideo />}></Route>
 
             </Routes>
         </BrowserRouter>

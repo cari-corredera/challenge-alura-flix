@@ -1,110 +1,72 @@
-.formulario{
-    width: 100vw;
-    height:auto;
-    
+.formulario {
+    width: 80vw;
+    height: 550px;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    /*para q no se vea el scroll*/
 
-    .containerModal{
+
+    .containerModal {
         display: flex;
-        flex-direction:column;
+        flex-direction: column;
         justify-content: center;
-        align-items: center;
-        width: 50vw;
-        height: 700px;
-        padding: 84px 20px; 
+        align-items: start;
+        width: 50%;
+        height: 800px;
+        padding-left: 80px;
+        margin-top: 15px;
         border-radius: 15px;
         background: #03122F;
         border: 3px solid var(--turquesa);
 
-    }/*Fin containerModal*/
-     
-    
-    button{
-        display: flex;
-        flex-direction:row;
-        justify-content:right;
-        align-items: right;      
-        width: 28px;
-        height: 28px;
-        background: #03122F;
-        border: none;
-        cursor: pointer;
-        
-    }
 
-    h2{
-        width: 100%;
-        /* height: 70px;*/
-        font-family: var(--front); 
-        font-size: 40px;
-        font-weight: 900;
-        line-height: 70px;
-        text-align: left;
-        color:var(--azul-oscuro);
-        margin-bottom: 20px;
-
-    }
-
-
-    .titulo,.imagen, .video{
-        width: 100%;
-        height: 108px;
-        /* gap:15px; */
-        /* margin-bottom: 5px; */
-        display: flex;
-        flex-direction: column;
-        
-    }  
-
-        label{
-            width: 100%;
-            height: 31px;
-            font-family:var(--font-button);
-            font-size: 18px;
-            font-weight: 600;
-            line-height: 24px;
-            text-align: left; 
-             color: var(--blanco);
-        } 
-        
-        
-        input{
-            width:100%;
-            height: 62px;
-            border-radius: 10px;
-            background:var(--gris-input);
-            border: 1px solid var(--azul-oscuro);
-            font-family:var(--font-button);
-            font-size: 15px;
-            font-weight: 600;
-            line-height: 24px;
+        h2 {
+            font-family: var(--front);
+            font-size: 40px;
+            font-weight: 900;
+            line-height: 70px;
             text-align: left;
-            padding-left: 15px;
-            color: var(--gris-claro);
+            color: var(--azul-oscuro);
+            margin-bottom: 20px;
+
         }
 
-        .descripcion{
-            width: Hug (573px)px;
-            height: Hug (158px)px;
-            gap: 15px;
-          
-            label{
+
+        .titulo,
+        .imagen,
+        .video,
+        .descripcion,
+        .categorias {
+            width: 80%;
+            height: 108px;
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            margin-bottom: 10px;
+            /* justify-content: space-around; */
+
+
+            label {
                 width: 100%;
-                height: 11px;
-                font-family:var(--font-button);
+                height: 31px;
+                font-family: var(--font-button);
                 font-size: 18px;
                 font-weight: 600;
                 line-height: 24px;
-                /* text-align: center; */
-                 /* color: var(--blanco); */
-            } 
+                text-align: left;
+                color: var(--blanco);
 
-            textarea {
-                width: 573px;
-                height:112px;
+            }
+
+
+            input {
+
+                width: 100%;
+                height: 62px;
                 border-radius: 10px;
-                background:var(--gris-input);
+                background: var(--gris-input);
                 border: 1px solid var(--azul-oscuro);
-                font-family:var(--font-button);
+                font-family: var(--font-button);
                 font-size: 15px;
                 font-weight: 600;
                 line-height: 24px;
@@ -113,49 +75,68 @@
                 color: var(--gris-claro);
             }
 
-        
-        }/*Fin descripcion*/
-       
+            textarea {
+                width: 100%;
+                height: 112px;
+                border-radius: 10px;
+                background: var(--gris-input);
+                border: 1px solid var(--azul-oscuro);
+                font-family: var(--font-button);
+                font-size: 15px;
+                font-weight: 600;
+                line-height: 24px;
+                text-align: left;
+                padding-left: 15px;
+                color: var(--gris-claro);
+            }
 
-        .btn{
-            width:100vw;
+        }
+
+        /*Fin Titulo,Descripcion,etc*/
+
+
+
+        .btn {
+            width: 84%;
             height: 108px;
-            gap: 70px; 
-            margin:0px 45px;
-             display: flex;
+            display: flex;
             flex-direction: row;
-            align-items:end;
-            justify-content: space-evenly;
-    
-            button{
-                width: 180px;
-                height: 54px;
+            align-items: center;
+            justify-content: space-between;
+
+            button {
+                width: 150px;
+                height: 50px;
                 border-radius: 15px;
-                font-family:var(--font-button);
+                font-family: var(--font-button);
                 font-size: 18px;
                 font-weight: 900;
                 line-height: 24px;
                 text-align: center;
-                background:var(--gris-input);
-                color:var(--blanco) 
+                background: var(--gris-input);
+                color: var(--blanco)
             }
-    
-             .btnGuardar{
-                    border: 1px solid var(--azul-oscuro);
+
+            .btnGuardar {
+                border: 2px solid var(--azul-oscuro);
+                box-shadow: 0px 0px 12px 4px var(--azul-oscuro) inset;
+                color: var(--azul-oscuro)
             }
-        
-            .btnLimpiar{
-                    color:var(--blanco);
-                    border:1px solid var(--blanco)
+
+            .btnLimpiar {
+                color: var(--blanco);
+                border: 2px solid var(--blanco);
             }
-        
-    
-        }/*Fin btn*/
 
 
-}/*Fin formulario*/
+        }
 
+        /*Fin btn*/
 
+    }
 
+    /*Fin containerModal*/
 
+}
 
+/*Fin formulario*/

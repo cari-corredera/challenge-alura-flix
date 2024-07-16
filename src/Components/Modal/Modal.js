@@ -1,17 +1,19 @@
 import styles from "./Modal.module.css"
+import iconCerrarForm from "./iconCerrarForm.png"
 
-function Modal({open, onClose, children}){
 
-    if(!open){
+function Modal({ open, onClose, children }) {
+
+    if (!open) {
         return null;
     }
 
-    return(
+    return (
         <div className={styles.modalContainer}>
             <div className={styles.modal}>
-                <button 
-                    className={styles.closeButton} onClick ={onClose}>
-                   <span>X</span> 
+                <button
+                    className={styles.closeButton} onClick={onClose}>
+                    <img src={iconCerrarForm} alt="Icono cerrar" />
                 </button>
                 {children}
             </div>
