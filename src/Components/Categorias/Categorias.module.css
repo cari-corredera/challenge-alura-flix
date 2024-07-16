@@ -15,19 +15,19 @@
     }
 
 
-    .frontEnd {
+    .frontend {
         background: var(--turquesa);
         border: 5px solid var(--turquesa);
 
     }
 
-    .backEnd {
+    .backend {
         background: var(--verde);
         border: 5px solid var(--verde);
 
     }
 
-    .innovacionGestion {
+    .innovgestion {
         background: var(--naranja);
         border: 5px solid var(--naranja);
     }

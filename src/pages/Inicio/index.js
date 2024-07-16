@@ -51,46 +51,52 @@ function Inicio() {
         setIsModalOpen(false);
     };
 
-    const handleFormSubmit = (updatedCard) => {
-        fetch(`http://localhost:3001/${currentCategory}/${updatedCard.id}`, {
-            method: 'PUT',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(updatedCard)
-        })
-            .then(response => response.json())
-            .then(data => {
-                setCards(prevCards => ({
-                    ...prevCards,
-                    [currentCategory]: prevCards[currentCategory].map(card => card.id === data.id ? data : card)
-                }));
-                setIsModalOpen(false);
+    const handleFormSubmit = async (updatedCard) => {
+        try {
+            const response = await fetch(`http://localhost:3001/${currentCategory}/${updatedCard.id}`, {
+                method: 'PUT',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(updatedCard)
             });
+
+            if (!response.ok) {
+                throw new Error('Error al actualizar la tarjeta');
+            }
+
+            const data = await response.json();
+            setCards(prevCards => ({
+                ...prevCards,
+                [currentCategory]: prevCards[currentCategory].map(card => card.id === data.id ? data : card)
+            }));
+            setIsModalOpen(false);
+        } catch (error) {
+            console.error(error);
+        }
     };
 
-    const handleDeleteClick = (cardId, category) => {
-        fetch(`http://localhost:3001/${category}/${cardId}`, {
-
-            method: 'DELETE'
-        })
-            // .then(() => {
-            //     setCards(prevCards => ({
-            //         ...prevCards,
-            //         [category]: prevCards[category].filter(card => card.id !== cardId)
-            //     }));
-            // });
-
-            .then(() => {
-                setCards(prevCards => {
-                    const updatedCategory = prevCards[category] || [];
-                    return {
-                        ...prevCards,
-                        [category]: updatedCategory.filter(card => card.id !== cardId)
-                    };
-                });
+    const handleDeleteClick = async (cardId, currentCategory) => {
+        try {
+            const response = await fetch(`http://localhost:3001/${currentCategory}/${cardId}`, {
+                method: 'DELETE'
             });
-        };
+
+            if (!response.ok) {
+                throw new Error('Error al eliminar la tarjeta');
+            }
+
+            setCards(prevCards => {
+                const updatedCategory = prevCards[currentCategory] || [];
+                return {
+                    ...prevCards,
+                    [currentCategory]: updatedCategory.filter(card => card.id !== cardId)
+                };
+            });
+        } catch (error) {
+            console.error(error);
+        }
+    };
 
 
 
@@ -99,11 +105,11 @@ function Inicio() {
             <Cabecera />
             <Banner img="fondo" src="player" />
 
-            <Categorias title="FRONT END" nombreCategoria="frontEnd" cards={cards.frontend} onEdit={handleEditClick} onDelete={handleDeleteClick} />
+            <Categorias title="FRONT END" nombreCategoria="frontend" cards={cards.frontend} onEdit={handleEditClick} onDelete={handleDeleteClick} />
 
-            <Categorias title="BACK END" nombreCategoria="backEnd" cards={cards.backend} onEdit={handleEditClick} onDelete={handleDeleteClick} />
+            <Categorias title="BACK END" nombreCategoria="backend" cards={cards.backend} onEdit={handleEditClick} onDelete={handleDeleteClick} />
 
-            <Categorias title="INNOVACIÓN Y GESTIÓN" nombreCategoria="innovacionGestion" cards={cards.innovgestion} onEdit={handleEditClick} onDelete={handleDeleteClick} />
+            <Categorias title="INNOVACIÓN Y GESTIÓN" nombreCategoria="innovgestion" cards={cards.innovgestion} onEdit={handleEditClick} onDelete={handleDeleteClick} />
 
             <Footer />
             <Modal open={isModalOpen} onClose={handleCloseModal}>
