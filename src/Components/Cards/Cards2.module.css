@@ -1,0 +1,81 @@
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; 
+    gap: 30px; 
+    margin-bottom: 55px;
+}
+
+.card {
+    width: 435px; /* Ajusta el ancho de cada tarjeta */
+    display: flex;
+    flex-direction: column; /* Coloca los hijos en columna */
+    background-color:transparent; /* Fondo blanco para las tarjetas */
+    border-radius: 15px;
+    box-shadow: 0px 0px 17px 8px var(--turquesa) inset; /* Sombras según sea necesario */
+}
+
+.contenedorImagen {
+    width:430px;
+    height: 260px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
+
+.imagen {
+    width: 430px;
+    height: 100%;
+    border-radius: 15px 15px 0 0;
+    border: 3px solid var(--turquesa);
+    box-shadow: 0px 0px 17px 8px var(--turquesa) inset;
+}
+
+.icon {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 430px;
+    height: 59px;
+    margin-top: -30px;
+    border-radius: 0 0 15px 15px;
+    background: var(--negro);
+    border: 3px solid var(--turquesa);
+    box-shadow: 0px -4px 5px 3px var(--turquesa) inset;
+}
+
+button {
+    font-family: var(--font);
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 18.75px;
+    text-align: left;
+    color: var(--blanco);
+    width: 109.43px;
+    height: 40px;
+    background: transparent; /* Asegura que el fondo del botón sea transparente */
+    border: none; /* Remueve cualquier borde por defecto */
+}
+
+.btnBorrar, .btnEditar {
+    width: 25.43px;
+    height: 28px;
+    color: var(--blanco);
+}
+
+.frontend {
+    border: 5px solid var(--turquesa);
+    box-shadow: 0px 0px 17px 8px var(--turquesa) inset;
+}
+
+.backend {
+    border: 5px solid var(--verde);
+    box-shadow: 0px 0px 17px 8px var(--verde) inset;
+}
+
+.inovgest {
+    border: 5px solid var(--naranja);
+    box-shadow: 0px 0px 17px 8px var(--naranja) inset;
+}

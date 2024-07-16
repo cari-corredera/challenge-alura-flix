@@ -1,0 +1,75 @@
+{
+    "frontend":[
+   
+        {
+            "id": 1,
+            "titulo": "¿Cuándo usar let, var y const?",
+            "imagen": "https://caelum-online-public.s3.amazonaws.com/ESP-2052+-++React%3A+practicando+React+con+Js/282x425+-+Jean.png",
+            "video": "https://www.youtube.com/watch?v=PztCEdIJITY&t=2s"
+            
+        },
+        {
+            "id": 2,
+            "titulo": "¿Qué es JavaScript?",
+            "imagen": "https://caelum-online-public.s3.amazonaws.com/ESP-2052+-++React%3A+practicando+React+con+Js/282x425+-+Gabi.png",
+            "video": "https://www.youtube.com/watch?v=GJfOSoaXk4s"
+        },
+        {
+            "id": 3,
+            "titulo": "Equipo Front End",
+            "imagen": "https://caelum-online-public.s3.amazonaws.com/ESP-2052+-++React%3A+practicando+React+con+Js/282x425+-+Genesis.png",
+            "video": "https://www.youtube.com/watch?v=rpvrLaBQwgg"
+        }
+    ],
+
+    "backend": [
+        {
+            "id": 4,
+            "titulo": "Spring Framework",
+            "imagen": "https://caelum-online-public.s3.amazonaws.com/ESP-2052+-++React%3A+practicando+React+con+Js/282x425+-+Ale.png",
+            "video": "https://www.youtube.com/watch?v=t-iqt1b2qqk"
+        },
+
+        {
+            "id": 5,
+            "titulo": "¿Qué es SQL y NOSQL?",
+            "imagen": "https://caelum-online-public.s3.amazonaws.com/ESP-2052+-++React%3A+practicando+React+con+Js/282x425+-+Jean.png",
+            "video": "https://www.youtube.com/watch?v=cLLKVd5CNLc"
+        },
+
+        {
+            "id": 6,
+            "titulo": "Simplificando tu código en Java: Conoce los enumk",
+            "imagen": "https://caelum-online-public.s3.amazonaws.com/ESP-2052+-++React%3A+practicando+React+con+Js/282x425+-+Gabi.png",
+            "video": "https://www.youtube.com/watch?v=EoPvlE85XAQ"
+        }
+    ],
+
+    "innovgestion":[
+
+        {
+            "id": 7,
+            "titulo": "¿Qué son las Soft Skills?",
+            "imagen": "https://caelum-online-public.s3.amazonaws.com/ESP-2052+-++React%3A+practicando+React+con+Js/282x425+-+Genesis.png",
+            "video": "https://www.youtube.com/watch?v=vhwspfvI52k"
+        },
+
+        {
+            "id": 8,
+            "titulo": "Siete Soft Skills más deseadas por las empresas",
+            "imagen": "https://caelum-online-public.s3.amazonaws.com/ESP-2052+-++React%3A+practicando+React+con+Js/282x425+-+Ale.png",
+            "video": "https://www.youtube.com/watch?v=YhR7Zp8NUzE"
+        },
+
+        {
+            "id": 9,
+            "titulo": "¿Qué son las metodologias ágiles?",
+            "imagen": "https://caelum-online-public.s3.amazonaws.com/ESP-2052+-++React%3A+practicando+React+con+Js/282x425+-+Jean.png",
+            "video": "https://www.youtube.com/watch?v=6N3OkLCfK-0"
+        } 
+    ]
+
+}
+
+
+

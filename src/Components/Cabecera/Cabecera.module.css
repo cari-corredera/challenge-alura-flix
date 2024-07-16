@@ -1,0 +1,57 @@
+.cabecera{
+    width: 100vw;
+    height: 125px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    top: 5px;
+    left: 0.5px;
+    border: 0px 0px 4px 0px;
+    background:var(--gris-oscuro);
+    border-bottom: 4px solid var(--azul-claro);
+    box-shadow: 0px 5px 29px 0px var(--azul-oscuro);
+
+}
+
+.logoContainer{
+    img{
+        margin-left: 25px;
+    }
+}
+
+.botones{
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    flex-direction: row;
+    gap: 25px;
+    padding-right: 20px;
+
+    button{
+        width: 180px;
+        height: 54px;
+        font-family:"Source Sans 3", sans-serif;
+        font-size: 20px;
+        font-weight: 900;
+        line-height: 24px;
+        text-align: center;
+        border-radius: 15px;
+        border: 2px;
+    }/*fin botones*/
+
+    .btnHome{
+        color: #2271D1;
+        background: #000000E5;
+        border: 2px solid #2271D1; 
+        box-shadow: 0px 0px 12px 4px #2271D1 inset;
+    }
+
+    .btnVideo{
+        background: #000000E5;
+        color: #FFFFFF;
+        border: 2px solid #F5F5F5;
+        
+    }
+
+}/*fin botones*/

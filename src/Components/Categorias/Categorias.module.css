@@ -1,0 +1,36 @@
+.categoria {
+
+    h2 {
+        font-family: var(--font);
+        font-size: 32px;
+        font-weight: 800;
+        line-height: 37px;
+        text-align: center;
+        color: var(--blanco);
+        width: 432px;
+        height: 52px;
+        padding-top: 18px;
+        border-radius: 15px;
+
+    }
+
+
+    .frontEnd {
+        background: var(--turquesa);
+        border: 5px solid var(--turquesa);
+
+    }
+
+    .backEnd {
+        background: var(--verde);
+        border: 5px solid var(--verde);
+
+    }
+
+    .innovacionGestion {
+        background: var(--naranja);
+        border: 5px solid var(--naranja);
+    }
+
+} /*Fin categoria*/
+
