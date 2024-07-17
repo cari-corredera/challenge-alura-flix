@@ -1,5 +1,3 @@
-// import { BrowserRouter, Route, Routes } from "react-router-dom";
-// import Inicio from "./pages/Inicio";
 
 import NuevoVideo from "pages/NuevoVideo";
 

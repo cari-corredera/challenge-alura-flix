@@ -1,14 +1,68 @@
+import { useState } from "react";
 import styles from "./index.module.css"
 import Cabecera from "../../Components/Cabecera/Cabecera"
 import Footer from "Components/Footer/Footer";
 import ListaCategorias from "Components/ListaCategorias/ListaCategoria";
 
 function NuevoVideo() {
+
+    const [formData, setFormData] = useState({
+        titulo: '',
+        categoria: 'frontend',
+        imagen: '',
+        video: '',
+        descripcion: ''
+    });
+
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setFormData(prevData => ({
+            ...prevData,
+            [name]: value
+        }));
+    };
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+
+        console.log('FormData before submit:', formData);
+    
+        if (!formData.categoria) {
+            console.error('Error: La categoría no está definida');
+            return;
+        }
+
+        try {
+            const response = await fetch(`http://localhost:3001/${formData.categoria}`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(formData)
+            });
+            if (!response.ok) {
+                throw new Error('Error al crear el video');
+            }
+            const data = await response.json();
+            console.log('Video creado:', data);
+            // Limpia el formulario después de enviarlo
+            setFormData({
+                titulo: '',
+                categoria: 'frontend',
+                imagen: '',
+                video: '',
+                descripcion: ''
+            });
+        } catch (error) {
+           console.log(formData.categoria); console.error('Error:', error);
+        }
+    };
+
     return (
         <>
             <Cabecera />
             <section >
-                <form className={styles.containerModalVideo}>
+                <form className={styles.containerModalVideo} onSubmit={handleSubmit}>
 
                     <div className={styles.titulos}>
                         <h2 className={styles.tituloModalVideo}>NUEVO VIDEO</h2>
@@ -18,7 +72,6 @@ function NuevoVideo() {
                     <div className={styles.formulario}>
                         <h4 className={styles.titCrearTarj}>Crear Tarjeta</h4>
                         <div className={styles.contenedor}>
-                            {/* <div className={styles.filaUno}> */}
                             <div className={styles.titulo}>
                                 <label className={styles.labelTitulo}>
                                     Titulo:
@@ -28,14 +81,15 @@ function NuevoVideo() {
                                     placeholder="Ingrese el título"
                                     type="text"
                                     name="titulo"
+                                    value={formData.titulo}
+                                    onChange={handleChange}
+                                   
                                 />
 
                             </div>
 
-                            <ListaCategorias />
-                            {/* </div> */}
+                            <ListaCategorias onChange={(categoria) => setFormData(prevData => ({ ...prevData, categoria }))}/>
 
-                            {/* <div className={styles.filaDos}> */}
                             <div className={styles.imagen}>
                                 <label className={styles.labelImagen}>
                                     Imagen:
@@ -45,6 +99,8 @@ function NuevoVideo() {
                                     placeholder="El enlace es obligatorio"
                                     type="text"
                                     name="imagen"
+                                    value={formData.imagen}
+                                    onChange={handleChange}
 
                                 />
 
@@ -59,13 +115,13 @@ function NuevoVideo() {
                                     placeholder="Ingrese el enlace del video"
                                     type="text"
                                     name="video"
+                                    value={formData.video}
+                                    onChange={handleChange}
 
                                 />
 
                             </div>
-                            {/* </div> */}
-
-                            {/* <div className={styles.filaTres}> */}
+                            
                             <div className={styles.descripcion}>
                                 <label className={styles.labelDescripcion}>
                                     Descripción:
@@ -73,7 +129,9 @@ function NuevoVideo() {
                                 </label>
                                 <textarea className={styles.textareaDescripcion}
                                     placeholder="¿De qué se trata este video?"
-                                    name="descripción"
+                                    name="descripcion"
+                                    value={formData.descripcion}
+                                    onChange={handleChange}
 
 
                                 >
@@ -82,16 +140,12 @@ function NuevoVideo() {
                             </div>
                         </div>
                     </div>
-                    {/* </div> */}
-
-                    {/* <div className={styles.irArriba}>
-                        <a href="#top">Ir arriba</a>
-                    </div> */}
 
                     <div className={styles.btn}>
                         <button className={styles.btnGuardar} type="submit" value="guardar">GUARDAR
                         </button>
-                        <button className={styles.btnLimpiar} type="reset" value="limpiar formulario">LIMPIAR</button>
+                        <button className={styles.btnLimpiar} type="reset" value="limpiar formulario" onClick={() => setFormData({ titulo: '', categoria: 'frontend', imagen: ''
+                        , video: '', descripcion: '' })}>LIMPIAR</button>
                     </div>
                 </form>
             </section>
