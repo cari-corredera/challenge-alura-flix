@@ -91,9 +91,11 @@ function EditForm({ onSubmit, initialData }) {
                 </div>
 
                 <div className={styles.btn}>
-                    <button className={styles.btnGuardar} type="submit">GUARDAR
+                    <button className={styles.btnGuardar} type="submit" value="guardar">GUARDAR
                     </button>
-                    <button className={styles.btnLimpiar} type="">LIMPIAR</button>
+                    <button className={styles.btnLimpiar} type="reset" value="limpiar formulario" onClick={() => setFormData({ titulo: '', categoria: 'frontend', imagen: ''
+                        , video: '', descripcion: '' })}>LIMPIAR
+                    </button>
                 </div>
             </form>
         </section>

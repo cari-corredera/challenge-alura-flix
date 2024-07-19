@@ -4,19 +4,22 @@
       "id": 1,
       "titulo": "¿Cuándo usar let, var y const?",
       "imagen": "https://caelum-online-public.s3.amazonaws.com/ESP-2052+-++React%3A+practicando+React+con+Js/282x425+-+Jean.png",
-      "video": "https://www.youtube.com/watch?v=PztCEdIJITY&t=2s"
+      "video": "https://www.youtube.com/watch?v=PztCEdIJITY&t=2s",
+      "descripcion": ""
     },
     {
-      "id": 2,
+      "id": "2",
       "titulo": "¿Qué es JavaScript?",
       "imagen": "https://caelum-online-public.s3.amazonaws.com/ESP-2052+-++React%3A+practicando+React+con+Js/282x425+-+Gabi.png",
-      "video": "https://www.youtube.com/watch?v=GJfOSoaXk4s"
+      "video": "https://www.youtube.com/watch?v=GJfOSoaXk4s",
+      "descripcion": ""
     },
     {
       "id": "3",
       "titulo": "Equipo Front End",
       "imagen": "https://caelum-online-public.s3.amazonaws.com/ESP-2052+-++React%3A+practicando+React+con+Js/282x425+-+Genesis.png",
-      "video": "https://www.youtube.com/watch?v=rpvrLaBQwgg"
+      "video": "https://www.youtube.com/watch?v=rpvrLaBQwgg",
+      "descripcion": ""
     }
   ],
   "backend": [
