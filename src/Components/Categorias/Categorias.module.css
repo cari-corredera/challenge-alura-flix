@@ -1,4 +1,8 @@
 .categoria {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
 
     h2 {
         font-family: var(--font);
@@ -41,6 +45,17 @@
         flex-wrap: wrap;
     }
 
+}/*Fin categoria*/
+
+@media screen and (max-width:968px){
+    .categoria{
+        align-items: center;
+        .contenedorCards{
+            flex-wrap: nowrap;
+            overflow-x: scroll;
+            gap: 30px;
+        }
+    }
+    
 }
 
-/*Fin categoria*/

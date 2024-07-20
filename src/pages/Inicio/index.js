@@ -114,7 +114,6 @@ function Inicio() {
             <Footer />
             <Modal open={isModalOpen} onClose={handleCloseModal}>
                 <EditForm onSubmit={handleFormSubmit} initialData={currentCard} />
-
             </Modal>
         </>
     )

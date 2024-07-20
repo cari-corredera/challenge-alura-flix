@@ -9,7 +9,7 @@ function Banner({ img, color, src }) {
 
             <div className={styles.videoDestacado}>
                 <div className={styles.player}>
-                    <img src={`/img/banner-${src}.png`} alt="Imagen banner"/>
+                    <img src={`/img/banner-${src}.png`} alt="Imagen video"/>
                 </div>
 
                 <div className={styles.info}>
