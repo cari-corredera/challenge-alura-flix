@@ -8,5 +8,72 @@
     border-top: 4px solid var(--azul-claro);
     position: relative;
     box-shadow: 0px 5px 29px 0px var(--azul-oscuro);
+  
+    .botones{
+        display: none;  
+    }
 
 }
+
+@media screen and (max-width: 610px){
+    .footer{
+         
+        .imgLogo{
+            display: none;
+        }
+        
+        .botones {
+            display: flex;
+            align-items: center;
+            justify-content: right;
+            flex-direction: row;
+            gap: 25px;
+            padding-right: 20px;
+        
+            button {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-evenly;
+                width: 180px;
+                height: 54px;
+                font-family: "Source Sans 3", sans-serif;
+                font-size: 20px;
+                font-weight: 900;
+                line-height: 24px;
+                text-align: center;
+                border-radius: 30px;
+                border: 2px;
+                background: transparent;
+                
+            }/*fin botones*/
+        
+        
+            .activo {
+                color: var(--azul-claro);
+                background:var(negro);
+                border: 2px solid #2271D1;
+                box-shadow: 0px 0px 12px 4px var(--azul-claro) inset;
+                
+
+                img{
+                    width: 34px;
+                    height: 34px;
+                    color:var(--azul-claro);
+                }
+               
+            } /*Fin activo*/ 
+
+            .btnVideo, .btnHome {
+                img{width: 44px;
+                    height: 44px;
+                }
+        
+            }/*fin btnVideo*/
+        
+        }/*fin botones*/
+
+    }/*Fin footer*/
+
+    
+}/* Fin media*/

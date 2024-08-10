@@ -1,5 +1,5 @@
 .formulario {
-    width: 80vw;
+    width: 100%;
     height: 550px;
     overflow-y: scroll;
     scrollbar-width: none;
@@ -11,8 +11,8 @@
         flex-direction: column;
         justify-content: center;
         align-items: start;
-        width: 50%;
-        height: 800px;
+        width: 80%;
+        height: 840px;
         padding-left: 80px;
         margin-top: 15px;
         border-radius: 15px;
@@ -129,14 +129,22 @@
             }
 
 
+        } /*Fin btn*/
+
+    } /*Fin containerModal*/
+
+}/*Fin formulario*/
+
+@media screen and (max-width:515px){
+   .formulario{
+    .containerModal{
+        .btn{
+            flex-direction: column;
+            gap: 10px;
         }
-
-        /*Fin btn*/
-
     }
-
-    /*Fin containerModal*/
-
+   }
 }
+    
 
-/*Fin formulario*/
+

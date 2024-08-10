@@ -4,6 +4,8 @@ import logo from "./logo-flix.png"
 import CabeceraLink from "../CabeceraLink/CabeceraLink"
 
 
+
+
 function Cabecera() {
     return (
         <header className={styles.cabecera}>
@@ -16,7 +18,7 @@ function Cabecera() {
             <nav className={styles.botones}>
                 <CabeceraLink url="/">
                     <button className={styles.btnHome}>
-                        HOME
+                        HOME 
                     </button>
                 </CabeceraLink>
 

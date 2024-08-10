@@ -1,5 +1,5 @@
-.containerModalVideo {
-    width: 100vw;
+.containerNuevoVideo {
+    width: 100%;
     height: auto;
     margin: 0;
 
@@ -36,13 +36,12 @@
             color: var(--blanco);
         }
 
-    }
+    }/*Fin titulos*/
 
-    /*Fin titulos*/
-
+    
     .formulario {
         width: 100%;
-        height: 867px;
+        height: auto;
         gap: 60px;
 
 
@@ -67,6 +66,7 @@
 
         .contenedor {
             width: 100%;
+            height: auto;
             display: flex;
             gap: 60px;
             flex-direction: row;
@@ -74,12 +74,10 @@
             justify-content: left;
             flex-wrap: wrap;
             margin-left: 5%;
-            /* margin-right:5%; */
 
             .titulo {
                 width: 43%;
                 height: 108px;
-                /* margin-bottom: 5px; */
                 display: flex;
                 flex-direction: column;
 
@@ -238,42 +236,24 @@
                     color: var(--gris-claro);
                 }
 
-            }
-
-            /*Fin descripcion*/
+            }/*Fin descripcion*/
 
 
-        }
+        } /*Fin contenedor*/
 
-        /*Fin contenedor*/
-
-
-    }
-
-    /*Fin formulario*/
-
-    /* .irArriba{
-        display: flex;
-        align-items: end;
-        justify-content: end;
-        font-family:var(--font-button);
-        font-size: 14px;
-        font-weight: 900;
-        line-height: 24px;
-        text-decoration: none;
-        color:var(--blanco) 
-
-    } */
+    } /*Fin formulario*/
 
     .btn {
         width: 100%;
         height: 108px;
         gap: 70px;
         margin: 0;
+        margin-top: 15px;
         margin-left: 70px;
         display: flex;
+        align-items: center;
         flex-direction: row;
-        justify-content: left;
+        justify-content:left;
 
         button {
             width: 180px;
@@ -298,10 +278,19 @@
         }
 
 
+    }/*Fin btn*/
+
+}/*Fin containerModalVideo*/
+
+@media screen and (max-width:610px){
+    .containerNuevoVideo{
+        .formulario{
+            .contenedor{
+                .titulo, .imagen, .video, .descripcion{
+                    width: 90%;
+                }
+            }
+        }
     }
-
-    /*Fin btn*/
-
 }
 
-/*Fin containerModalVideo*/

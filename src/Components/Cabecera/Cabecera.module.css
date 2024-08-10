@@ -56,6 +56,14 @@
 
     }
 
+}/*fin botones*/
+
+@media screen and (max-width:610px){
+    .cabecera{
+        .botones{
+            display: none;
+                        
+        }
+    }
 }
 
-/*fin botones*/

@@ -1,27 +1,58 @@
-import ListaCategorias from "Components/ListaCategorias/ListaCategoria";
+import ListaCategorias from "../ListaCategorias/ListaCategoria.js";
 import styles from "./EditForm.module.css"
 import { useState, useEffect } from "react";
 
 
 
 function EditForm({ onSubmit, initialData }) {
-    const [formData, setFormData] = useState(initialData || {});
+
+    const [formData, setFormData] = useState({
+        id:initialData.id,
+        titulo: initialData.titulo,
+        categoria: initialData.categoria,
+        imagen: initialData.imagen,
+        video: initialData.video,
+        descripcion: initialData.descripcion
+    }|| {});
 
     useEffect(() => {
-        setFormData(initialData || {});
+        setFormData({
+            id:initialData.id,
+            titulo: initialData.titulo,
+            categoria: initialData.categoria,
+            imagen: initialData.imagen,
+            video: initialData.video,
+            descripcion: initialData.descripcion
+        } || {});
     }, [initialData]);
 
     const handleChange = (e) => {
         const { name, value } = e.target;
-        setFormData({
-            ...formData,
-            [name]: value,
-        })
+        setFormData(prevData => ({
+            ...prevData,
+            [name]: value
+        }));
+
+        // setFormData({
+        //     ...formData,
+        //     [name]: value,
+        // })
     }
+
+    const handleCategoryChange = (categoria) => {
+        setFormData(prevData => ({
+            ...prevData,
+            categoria
+        }));
+    };
 
     const handleSubmit = (e) => {
         e.preventDefault();
         onSubmit(formData);
+        console.log(formData);
+        console.log(initialData.titulo);
+        
+        
     }
 
     if (!formData) return null;
@@ -38,7 +69,7 @@ function EditForm({ onSubmit, initialData }) {
                 <div className={styles.titulo}>
                     <label>
                         Titulo:
-                    </label>
+                    </label>.
                     <input
                         type="text"
                         name="titulo"
@@ -49,7 +80,10 @@ function EditForm({ onSubmit, initialData }) {
                 </div>
 
                 <div className={styles.categorias}>
-                    <ListaCategorias />
+                    <ListaCategorias
+                    selectedCategory={formData.categoria}
+                    onChange={handleCategoryChange}/>
+                    {/* <ListaCategorias onChange={(categoria) => setFormData(prevData => ({ ...prevData, categoria }))}/> */}
                 </div>
 
                 <div className={styles.imagen}>
@@ -93,8 +127,10 @@ function EditForm({ onSubmit, initialData }) {
                 <div className={styles.btn}>
                     <button className={styles.btnGuardar} type="submit" value="guardar">GUARDAR
                     </button>
-                    <button className={styles.btnLimpiar} type="reset" value="limpiar formulario" onClick={() => setFormData({ titulo: '', categoria: 'frontend', imagen: ''
-                        , video: '', descripcion: '' })}>LIMPIAR
+                    <button className={styles.btnLimpiar} type="reset" value="limpiar formulario" onClick={() => setFormData({ titulo: '', categoria: 'frontend', 
+                    imagen: '',
+                     video: '', descripcion: '' 
+                     })}>LIMPIAR
                     </button>
                 </div>
             </form>

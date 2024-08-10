@@ -3,12 +3,15 @@ import styles from "./index.module.css"
 import Cabecera from "../../Components/Cabecera/Cabecera"
 import Footer from "Components/Footer/Footer";
 import ListaCategorias from "Components/ListaCategorias/ListaCategoria";
+import home from "./home.png";
+import masNuevoVideo from "./masNuevoVideo.png"
+
 
 function NuevoVideo() {
 
     const [formData, setFormData] = useState({
         titulo: '',
-        categoria: 'frontend',
+        categoria: 'frontEnd',
         imagen: '',
         video: '',
         descripcion: ''
@@ -33,7 +36,7 @@ function NuevoVideo() {
         }
 
         try {
-            const response = await fetch(`http://localhost:3001/${formData.categoria}`, {
+            const response = await fetch('http://localhost:3001/cursos', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -48,7 +51,7 @@ function NuevoVideo() {
             // Limpia el formulario después de enviarlo
             setFormData({
                 titulo: '',
-                categoria: 'frontend',
+                categoria: 'frontEnd',
                 imagen: '',
                 video: '',
                 descripcion: ''
@@ -61,8 +64,8 @@ function NuevoVideo() {
     return (
         <>
             <Cabecera />
-            <section >
-                <form className={styles.containerModalVideo} onSubmit={handleSubmit}>
+            <section>
+                <form className={styles.containerNuevoVideo} onSubmit={handleSubmit}>
 
                     <div className={styles.titulos}>
                         <h2 className={styles.tituloModalVideo}>NUEVO VIDEO</h2>
@@ -71,6 +74,7 @@ function NuevoVideo() {
 
                     <div className={styles.formulario}>
                         <h4 className={styles.titCrearTarj}>Crear Tarjeta</h4>
+                        
                         <div className={styles.contenedor}>
                             <div className={styles.titulo}>
                                 <label className={styles.labelTitulo}>
@@ -149,7 +153,12 @@ function NuevoVideo() {
                     </div>
                 </form>
             </section>
-            <Footer />
+            <Footer
+                iconHome={home}
+                iconVideo={masNuevoVideo}
+                textVideo="Nuevo Video"
+                classVideo="activo"
+            />  
         </>
     )
 }

@@ -13,7 +13,8 @@
         color: var(--blanco);
         padding: 20px;
         border-radius: 8px;
-        max-width: 500px;
+        max-width: 600px;
+        min-width:300px;
         width: 100%;
         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
         position: relative;
@@ -22,7 +23,7 @@
         .closeButton {
             position: absolute;
             top: 60px;
-            right: -65px;
+            right: 78px;
             background: none;
             border: none;
             font-size: 20px;
@@ -44,3 +45,12 @@
 
 }/*Fin modalContainer*/
 
+@media screen and (max-width:515px){
+    .modalContainer{
+        .modal{
+            .closeButton{
+                right: 48px;
+            }
+        }
+    }
+}
